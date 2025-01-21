@@ -1,0 +1,186 @@
+Output:
+
+CREATE TABLE
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+   city    
+-----------
+ Hyderabad
+ Ahmedabad
+(2 rows)
+
+ city 
+------
+(0 rows)
+
+   city    
+-----------
+ Hyderabad
+ Ahmedabad
+ Mumbai
+ Mumbai
+ Mumbai
+ Mumbai
+ Mumbai
+(7 rows)
+
+   city    
+-----------
+ Ahmedabad
+(1 row)
+
+  city   
+---------
+ Goa
+ kochin
+ kolkata
+(3 rows)
+
+ empid |  name   |   city    
+-------+---------+-----------
+     1 | Clark   | Hyderabad
+     2 | Dave    | Ahmedabad
+     3 | Ava     | Mumbai
+     4 | Ava     | Mumbai
+     5 | Ava     | Mumbai
+     6 | Ava     | Mumbai
+     7 | Ava     | Mumbai
+     8 | shabbir | Goa
+     9 | akhil   | Delhi
+    10 | saurabh | chennai
+(10 rows)
+
+ empid | name |  city  
+-------+------+--------
+     3 | Ava  | Mumbai
+     4 | Ava  | Mumbai
+     5 | Ava  | Mumbai
+     6 | Ava  | Mumbai
+     7 | Ava  | Mumbai
+(5 rows)
+
+ empid | name |  city  
+-------+------+--------
+     3 | Ava  | Mumbai
+     4 | Ava  | Mumbai
+     5 | Ava  | Mumbai
+     6 | Ava  | Mumbai
+     7 | Ava  | Mumbai
+(5 rows)
+
+ empid |  name  |   city   
+-------+--------+----------
+    14 | kartik | Banglore
+(1 row)
+
+ empid |  name  |   city   
+-------+--------+----------
+    14 | kartik | Banglore
+     3 | Ava    | Mumbai
+     4 | Ava    | Mumbai
+     5 | Ava    | Mumbai
+     6 | Ava    | Mumbai
+     7 | Ava    | Mumbai
+(6 rows)
+
+ empid |  name   |   city    
+-------+---------+-----------
+    14 | kartik  | Banglore
+    13 | sanskar | pune
+    12 | pankaj  | kolkata
+    11 | ritik   | kochin
+    10 | saurabh | chennai
+     9 | akhil   | Delhi
+     8 | shabbir | Goa
+     7 | Ava     | Mumbai
+     6 | Ava     | Mumbai
+     5 | Ava     | Mumbai
+     4 | Ava     | Mumbai
+     3 | Ava     | Mumbai
+     2 | Dave    | Ahmedabad
+     1 | Clark   | Hyderabad
+(14 rows)
+
+INSERT 0 1
+INSERT 0 1
+ empid |   name   | city 
+-------+----------+------
+    15 | akhilesh | 
+    16 | bhavin   | 
+(2 rows)
+
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+ unique_name 
+-------------
+ akhilesh
+ sanskar
+ Clark
+ Ava
+ saurabh
+ pankaj
+ akhil
+ kartik
+ Dave
+ bhavin
+ ritik
+ shabbir
+(12 rows)
+
+CREATE TABLE
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+ total_amount 
+--------------
+       466754
+(1 row)
+
+ALTER TABLE
+ empid |   name   |   city    |    date    
+-------+----------+-----------+------------
+     1 | Clark    | Hyderabad | 2025-01-21
+     2 | Dave     | Ahmedabad | 2025-01-21
+     3 | Ava      | Mumbai    | 2025-01-21
+     4 | Ava      | Mumbai    | 2025-01-21
+     5 | Ava      | Mumbai    | 2025-01-21
+     6 | Ava      | Mumbai    | 2025-01-21
+     7 | Ava      | Mumbai    | 2025-01-21
+     8 | shabbir  | Goa       | 2025-01-21
+     9 | akhil    | Delhi     | 2025-01-21
+    10 | saurabh  | chennai   | 2025-01-21
+    11 | ritik    | kochin    | 2025-01-21
+    12 | pankaj   | kolkata   | 2025-01-21
+    13 | sanskar  | pune      | 2025-01-21
+    14 | kartik   | Banglore  | 2025-01-21
+    15 | akhilesh |           | 2025-01-21
+    16 | bhavin   |           | 2025-01-21
+    17 | shabbir  | himachal  | 2025-01-21
+    18 | shabbir  | jammu     | 2025-01-21
+    19 | shabbir  | Kashmir   | 2025-01-21
+    20 | shabbir  | lucknow   | 2025-01-21
+(20 rows)

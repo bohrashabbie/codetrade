@@ -1,0 +1,94 @@
+
+-- create
+CREATE TABLE EMPLOYEE (
+  empId INTEGER PRIMARY KEY,
+  name TEXT NOT NULL,
+  city TEXT NOT NULL
+);
+
+-- insert
+INSERT INTO EMPLOYEE VALUES (0001, 'Clark', 'Hyderabad');
+INSERT INTO EMPLOYEE VALUES (0002, 'Dave', 'Ahmedabad');
+INSERT INTO EMPLOYEE VALUES (0003, 'Ava', 'Mumbai');
+INSERT INTO EMPLOYEE VALUES (0004, 'Ava', 'Mumbai');
+INSERT INTO EMPLOYEE VALUES (0005, 'Ava', 'Mumbai');
+INSERT INTO EMPLOYEE VALUES (0006, 'Ava', 'Mumbai');
+INSERT INTO EMPLOYEE VALUES (0007, 'Ava', 'Mumbai');
+INSERT INTO EMPLOYEE VALUES (0008, 'shabbir', 'Goa');
+INSERT INTO EMPLOYEE VALUES (0009, 'akhil', 'Delhi');
+INSERT INTO EMPLOYEE VALUES (0010, 'saurabh', 'chennai');
+INSERT INTO EMPLOYEE VALUES (0011, 'ritik', 'kochin');
+INSERT INTO EMPLOYEE VALUES (0012, 'pankaj', 'kolkata');
+INSERT INTO EMPLOYEE VALUES (0013, 'sanskar', 'pune');
+INSERT INTO EMPLOYEE VALUES (0014, 'kartik', 'Banglore');
+
+
+-- fetch 
+-- Create a table employee where it contains id, name, city. Find the city which ends with ‘abad’. Enter 30 records scattered in different cities like Hyderabad, Ahmedabad, Mumbai, Delhi, Chennai, Kochin, Kolkata, Pune, Bangalore.
+SELECT city FROM EMPLOYEE WHERE city like '%abad';
+-- Write a select query with multiple conditions using ‘AND’ and ‘OR’.
+-- find the student and the name and  city from 1and7 or 7 and 0010
+-- select student, city from EMPLOYEE where empId between (0001 and 0007) or 
+-- (select city from EMPLOYEE where city between 'Hyderabad' and 'Kochin');
+---Search records where the city contains the string ‘under’
+select city from EMPLOYEE where city like 'under';
+-- 4. Search records where the third last character of the city is ‘b’.
+select city from EMPLOYEE where city like '%b__';
+--  Search the records where the first character of the city is ‘A’.
+select city from EMPLOYEE where city like 'A%';
+-- Search the records where the second Character of the city is ‘o’
+select city from EMPLOYEE where city like '_o%';
+-- Search the first 10 records.
+select * from EMPLOYEE limit 10;
+-- Search first 5 records where city is Mumbai
+select *  from EMPLOYEE where city like 'Mumbai' limit 5;
+
+--Search first 5 records where the city is Mumbai or Bangalore. Search the next 5 records skipping the first 5 records where the city is Mumbai or Bangalore.
+select  * from   EMPLOYEE where city in ('Mumbai', 'Banglore') limit 5;
+
+select * from EMPLOYEE where city in ('Mumbai', 'Banglore') limit 5 offset 5;
+
+-- Sort the records where the city is Mumbai or Bangalore by City Name.
+select * from EMPLOYEE where city in('Mumbai', 'Banglore') order by city ;
+-- Sort all the records of the table by ID in descending order
+select * from EMPLOYEE order by empId desc ;
+-- Insert a few records where the city is not entered. Search all the records where the city field is blank
+Insert INTO EMPLOYEE VALUES (0015, 'akhilesh','');
+Insert INTO EMPLOYEE VALUES (0016, 'bhavin','');
+select * from EMPLOYEE where city like '';
+-- Enter a few duplicate records where the name is duplicate. Select unique records from a table.
+Insert INTO EMPLOYEE VALUES (0017, 'shabbir', 'himachal');
+Insert INTO EMPLOYEE VALUES (0018, 'shabbir', 'jammu');
+Insert INTO EMPLOYEE VALUES (0019, 'shabbir', 'Kashmir');
+Insert INTO EMPLOYEE VALUES (0020, 'shabbir', 'lucknow');
+select distinct name as unique_name from EMPLOYEE;
+-- Enter a column amount in the table. Get a total of the complete amount.
+
+
+CREATE TABLE EMPLOYEE_1 (
+  empId INTEGER PRIMARY KEY,
+  name TEXT NOT NULL,
+  city TEXT NOT NULL,
+  amount bigint NOT NULL
+);
+
+-- insert INSERT INTO EMPLOYEE VALUES (0001, 'Clark', 'Hyderabad');
+INSERT INTO EMPLOYEE_1 VALUES (0002, 'Dave', 'Ahmedabad', 10000);
+INSERT INTO EMPLOYEE_1 VALUES (0003, 'Ava', 'Mumbai', 20000);
+INSERT INTO EMPLOYEE_1 VALUES (0004, 'Ava', 'Mumbai', 30000);
+INSERT INTO EMPLOYEE_1 VALUES (0005, 'Ava', 'Mumbai', 50000);
+INSERT INTO EMPLOYEE_1 VALUES (0006, 'Ava', 'Mumbai', 90000);
+INSERT INTO EMPLOYEE_1 VALUES (0007, 'Ava', 'Mumbai', 10000);
+INSERT INTO EMPLOYEE_1 VALUES (0008, 'shabbir', 'Goa', 30000);
+INSERT INTO EMPLOYEE_1 VALUES (0009, 'akhil', 'Delhi', 8777);
+INSERT INTO EMPLOYEE_1 VALUES (0010, 'saurabh', 'chennai', 22222);
+INSERT INTO EMPLOYEE_1 VALUES (0011, 'ritik', 'kochin', 3444);
+INSERT INTO EMPLOYEE_1 VALUES (0012, 'pankaj', 'kolkata', 67777);
+INSERT INTO EMPLOYEE_1 VALUES (0013, 'sanskar', 'pune', 34444);
+INSERT INTO EMPLOYEE_1 VALUES (0014, 'kartik', 'Banglore',90090);
+
+select sum(amount) as total_amount from EMPLOYEE_1;
+-- Add a date field in the existing table. Search the records where the date is in the current year.
+
+ALTER TABLE EMPLOYEE ADD COLUMN date DATE DEFAULT CURRENT_DATE;
+select * from EMPLOYEE;
